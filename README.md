@@ -1,11 +1,10 @@
 This is a readme file for the Short GUI application I’ve written. It’s an application that is meant to showcase my familiarity and proficiency with basic JavaFX tools.
 This application utilizes techniques like:
-a) JavaFX GUI programming
-b) Event-Driven programming
-c) Inheritance & Polymorphism
-d) Parsing JSON Objects
+
+JavaFX GUI programming, Event-Driven programming, Inheritance & Polymorphism,  Parsing JSON Objects 
+
 Below is a scene-by-scene analysis of what each presents and how each looks like when the application is run.
-1. FirstScenepromptstheuserwiththeloginscreen.Afterenteringthe appropriate login and password, the user is sent to the home screen.
+1. First Scene prompts the user with the login screen. After entering the appropriate login and password, the user is sent to the home screen.
 2. The homescenedisplaystheoptionsofwheretheusercangowithinthe application. After a click on the button, the user is sent to the scene
    corresponding with the button. 
 4. This chat scene prompts the user with an emptys croll pane in the middle of the window, which fills up with a chat conversation as
