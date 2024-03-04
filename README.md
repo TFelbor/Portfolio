@@ -5,7 +5,7 @@ JavaFX GUI programming, Event-Driven programming, Inheritance & Polymorphism,  P
 
 Below is a scene-by-scene analysis of what each presents and how each looks like when the application is run.
 1. First Scene prompts the user with the login screen. After entering the appropriate login and password, the user is sent to the home screen.
-2. The homescenedisplaystheoptionsofwheretheusercangowithinthe application. After a click on the button, the user is sent to the scene
+2. The home scene displays the options of where the user can go within the application. After a click on the button, the user is sent to the scene
    corresponding with the button. 
 4. This chat scene prompts the user with an emptys croll pane in the middle of the window, which fills up with a chat conversation as
    the user clicks the buttons that initialize the ‘conversation’.
