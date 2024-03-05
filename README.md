@@ -1,18 +1,20 @@
-This is a readme file for the Short GUI application I’ve written. It’s an application that is meant to showcase my familiarity and proficiency with basic JavaFX tools.
-This application utilizes techniques like:
-
-JavaFX GUI programming, Event-Driven programming, Inheritance & Polymorphism,  Parsing JSON Objects 
-
-Below is a scene-by-scene analysis of what each presents and how each looks like when the application is run.
-1. First Scene prompts the user with the login screen. After entering the appropriate login and password, the user is sent to the home screen.
-2. The home scene displays the options of where the user can go within the application. After a click on the button, the user is sent to the scene
-   corresponding with the button. 
-4. This chat scene prompts the user with an empty scroll pane in the center of the stage, which fills up with a chat conversation as
-   the user clicks the buttons that initialize the ‘conversation’.
-6. This scene allows the user to lookup the price of a stock they wish, displaying it in the center of the scene. If the user clicks on
-   the ‘Reset & Try a different symbol’ button, the current stock being displayed and its price are moved to the left under ‘Previously looked up’,
-   freeing the center space for another symbol to be searched. 
-8. This scene presents the user with a calculator. Using the organized buttons, user can calculate a mathematical equation which product will be
-   displayed between the title and the buttons.
-10. Lastly the ‘Logout’ button will take the user to the login scene, and the 'Exit' button will stop running the application and quit.
-   
+Basic JavaFX GUI Application
+   The application is a Java program that with the use of JavaFX features implements some basic techniques and solutions to problems that building a GUI might present one with.
+Features: 
+   User Authentication: Allows the user to log-in using the appropriate username & password (guest initials: user, user123)
+   Event-Driven programming: The output is driven by user actions
+   Inheritance & Polymorphism: The classes of a program are built using a blueprint for classes
+   Parsing JSON Objects: The outputs are collected using an online request, then from JSON format parsed into the program’s GUI
+Usage:
+   Prerequisites: You need to make sure you have Java Development Kit (JDK) and JavaFX installed & working on your computer.
+   Building the program: Compile the source code to generate executable class files.
+   Running the program: Execute the compiled main class file (AppStarter.java) using Java Virtual Machine to run the code.
+Application Structure:
+   AppRunner.java ⇒ main class that initiates & launches the program
+   CalculatorScene.java ⇒ class responsible for displaying & handling the calculator
+   ChatScene.java ⇒ class implementing a simplified chat between you and me
+   HomeScene.java ⇒ class responsible for guiding the user through the choices of scenes
+   LoginScene.java ⇒ class responsible for the log-in scene
+   SceneManager.java ⇒ class that manages and simplifies the scene operations
+   SceneTemplate.java ⇒ abstract class serving as a blueprint for other scene classes
+   StockScene.java ⇒ class responsible for displaying & looking-up a stock price of a given symbol
