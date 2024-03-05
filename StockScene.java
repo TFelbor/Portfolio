@@ -29,7 +29,7 @@ public class StockScene extends SceneTemplate{
     // Constructor for the stock scene
     public StockScene() {
         // Set the scene title and message
-        setSceneTitle("Welcome to Stock Lookup");
+        setSceneTitle("Welcome to Stock look-up");
         setMessage("Type in a stock symbol to look up its price."
                 + "\n Use the 'Try Again' button to save it and look up another stock's price");
         
