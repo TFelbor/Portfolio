@@ -1,0 +1,4 @@
+- Welcome!
+- My name is Tytus Felbor, and this is my Portfolio Github Depository!
+- This is the main branch, which is empty at the moment, but if you wish to check-out few of my past projects, visit the other branches of this repository.
+- Thank you for dedicating your time to check this out, hope you're not dissapointed.
