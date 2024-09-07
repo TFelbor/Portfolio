@@ -1,2 +1,3 @@
 - This branch contains a few of my Python3 Practice Programs
 - It is continually updated with more and more programs to showcase the skills I'm gaining
+- All the practice programs are adjusted to be executed and interacted with through a terminal
