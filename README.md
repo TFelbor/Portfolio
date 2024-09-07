@@ -1,4 +1,2 @@
-- Welcome!
-- My name is Tytus Felbor, and this is my Portfolio Github Depository!
-- This is the main branch, which is empty at the moment, but if you wish to check-out few of my past projects, visit the other branches of this repository.
-- Thank you for dedicating your time to check this out, and I hope you will not leave dissapointed.
+- This branch contains a few of my Python3 Practice Programs
+- It is continually updated with more and more programs to showcase the skills I'm gaining
