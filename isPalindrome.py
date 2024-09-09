@@ -24,7 +24,13 @@ def isPalindrome(x: int) -> bool:
     
     return test
 
-print("\nEnter a number below to check if it's a palindrome.")
+print("------------------------------------------------------------------------------------\n" + 
+"Author: Tytus Felbor\n" +
+"Solution to LeetCode Exercise 9\n" +
+"This code given an integer x, return true if x is a palindrome, and false otherwise.\n" +
+"------------------------------------------------------------------------------------\n")
+
+print("Enter a number below to check if it's a palindrome.")
 num = input()
 palindrome = isPalindrome(num)
 if (palindrome):
