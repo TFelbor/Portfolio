@@ -34,6 +34,14 @@ def addTwoNumbers(l1, l2):
     #Return the result
     return result
     
+print("----------------------------------------------------------------------------------------------------\n" + 
+"Author: Tytus Felbor\n" +
+"Solution to LeetCode Exercise 2 (edited to operate with Lists instead of Linked-Lists)\n" +
+"This code given two non-empty lists representing two non-negative integers, returns their sum.\n" +
+"The digits are stored in reverse order, and each of their components contains a single digit.\n" +
+"It adds the two numbers and returns the sum as a list." + 
+"\n----------------------------------------------------------------------------------------------------\n")
+
 print("Enter your first number. Each digit of the number seperate by a comma and a space.")
 numberOne = input().split(", ")
 
@@ -51,6 +59,4 @@ for n in range(len(numberTwo) - 1, - 1, - 1):
     nTwoRev.append(numberTwo[n])
     
 print("The two numbers reversed are: 1) " + str(nOneRev) + "; 2) " + str(nTwoRev))
-print("The reversed sum of those two numbers is: " + str(addTwoNumbers(nOneRev, nTwoRev)))
-
-   
+print("The reversed sum of those two numbers is: " + str(addTwoNumbers(nOneRev, nTwoRev)))  
