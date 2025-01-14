@@ -17,7 +17,7 @@
   4. Project Structure
   5. Components Overview
   6. Environments
-  7.Evaluation
+  7. Evaluation
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -47,39 +47,39 @@
 
   a. Initialize the environment:
 
-env_name = "AntBulletEnv-v0"
-env = gym.make(env_name)
+  env_name = "AntBulletEnv-v0"
+  env = gym.make(env_name)
 
   b. Create the TD3 agent:
 
-from td3 import TD3
-policy = TD3(state_dim, action_dim, max_action)
+  from td3 import TD3
+  policy = TD3(state_dim, action_dim, max_action)
   
   c. Train the model:
 
-policy.train(replay_buffer, iterations=1000, batch_size=100, ...)
+  policy.train(replay_buffer, iterations=1000, batch_size=100, ...)
 
   d. Evaluate the model:
 
-avg_reward = evaluate_policy(policy, eval_episodes=10)
-print(f"Average Reward: {avg_reward}")
+  avg_reward = evaluate_policy(policy, eval_episodes=10)
+  print(f"Average Reward: {avg_reward}")
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   4. Project Structure
 
 - actor
-    * defines the Actor network responsible for action selection.
+    * Defines the Actor network responsible for action selection.
 - critic
-    * defines the Critic network for evaluating actions.
+    * Defines the Critic network for evaluating actions.
 - replay_buffer
-    * implements the replay buffer for experience replay.
+    * Implements the replay buffer for experience replay.
 - td3
     * Core implementation of the TD3 algorithm.
 - train
-    * main script for training the TD3 model.
+    * Main script for training the TD3 model.
 - evaluate
-    * script for evaluating the trained agent.
+    * Script for evaluating the trained agent.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -111,11 +111,11 @@ print(f"Average Reward: {avg_reward}")
 
   7. Evaluation
      
-To periodically measure the agent's performance:
+  To periodically measure the agent's performance:
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-def evaluate_policy(policy, eval_episodes=10):
+  def evaluate_policy(policy, eval_episodes=10):
     ...
     return avg_reward
 
