@@ -4,24 +4,24 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   1. Features: 
+   1. Features 
 
-   - User Authentication: Allows the user to log-in using the appropriate username & password (guest initials: user, user123)
-   - Event-Driven programming: The output is driven by user actions
-   - Inheritance & Polymorphism: The classes of a program are built using a blueprint for classes
-   - Parsing JSON Objects: The outputs are collected using an online request, then from JSON format parsed into the program’s GUI
+   - User Authentication ⇒ allows the user to log-in using the appropriate username & password (guest initials: user, user123)
+   - Event-Driven programming ⇒ the output is driven by user actions
+   - Inheritance & Polymorphism ⇒ the classes of a program are built using a blueprint for classes
+   - Parsing JSON Objects ⇒ the outputs are collected using an online request, then from JSON format parsed into the program’s GUI
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
    2. Usage
 
-   - Prerequisites: You need to make sure you have Java Development Kit (JDK) and JavaFX installed & working on your computer.
-   - Building the program: Compile the source code to generate executable class files.
-   - Running the program: Execute the compiled main class file (AppStarter.java) using Java Virtual Machine to run the code.
+   - Prerequisites ⇒ you need to make sure you have Java Development Kit (JDK) and JavaFX installed & working on your computer.
+   - Building the program ⇒ compile the source code to generate executable class files.
+   - Running the program ⇒ Execute the compiled main class file (AppStarter.java) using Java Virtual Machine to run the code.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
    
-   3. Application Structure:
+   3. Application Structure
 
    - AppRunner.java ⇒ main class that initiates & launches the program
    - CalculatorScene.java ⇒ class responsible for displaying & handling the calculator
