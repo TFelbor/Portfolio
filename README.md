@@ -23,8 +23,8 @@
 
   1. Installation
 
-  I) Ensure you have Python installed on your system.
-  II) Install the required dependencies by running:
+  - Ensure you have Python installed on your system.
+  - Install the required dependencies by running:
   pip install pybullet gym torch numpy
   
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
