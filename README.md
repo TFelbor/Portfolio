@@ -9,7 +9,8 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-  Table of Contents:
+  Table of Contents
+  
   1. Installation
   2. Features
   3. Usage
@@ -22,21 +23,22 @@
 
   1. Installation
 
-  Ensure you have Python installed on your system. Install the required dependencies by running:
-
+  I) Ensure you have Python installed on your system.
+  II) Install the required dependencies by running:
   pip install pybullet gym torch numpy
   
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   2. Features
-  - TD3 Algorithm:
-    Twin Critic Networks to reduce Q-value overestimation.
+     
+  - TD3 Algorithm
+    * Twin Critic Networks to reduce Q-value overestimation.
   - Target Policy Smoothing for stable updates.
   - Delayed Policy Updates for enhanced stability.
   - Compatible with various environments, including:
-    HalfCheetah-v2
-    AntBulletEnv-v0
-    HumanoidBulletEnv-v0
+    * HalfCheetah-v2
+    * AntBulletEnv-v0
+    * HumanoidBulletEnv-v0
   - Replay Buffer for storing and sampling experiences.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -76,6 +78,7 @@ evaluate - Script for evaluating the trained agent.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   5. Components Overview
+
   - Actor Network
     * Takes the current state as input and predicts actions.
     * Uses ReLU and Tanh activation functions for stability and bounded outputs.
@@ -93,6 +96,7 @@ evaluate - Script for evaluating the trained agent.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   6. Environments
+     
   - Supported Tasks
     * Half-Cheetah: A 2D robot optimizing for forward velocity.
     * Ant: A 3D quadruped robot balancing complexity and stability.
@@ -101,7 +105,10 @@ evaluate - Script for evaluating the trained agent.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   7. Evaluation
+     
 To periodically measure the agent's performance:
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def evaluate_policy(policy, eval_episodes=10):
     ...
