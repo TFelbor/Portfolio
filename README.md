@@ -68,12 +68,18 @@ print(f"Average Reward: {avg_reward}")
 
   4. Project Structure
 
-actor - Defines the Actor network responsible for action selection.
-critic - Defines the Critic network for evaluating actions.
-replay_buffer - Implements the replay buffer for experience replay.
-td3 - Core implementation of the TD3 algorithm.
-train - Main script for training the TD3 model.
-evaluate - Script for evaluating the trained agent.
+- actor
+    * defines the Actor network responsible for action selection.
+- critic
+    * defines the Critic network for evaluating actions.
+- replay_buffer
+    * implements the replay buffer for experience replay.
+- td3
+    * Core implementation of the TD3 algorithm.
+- train
+    * main script for training the TD3 model.
+- evaluate
+    * script for evaluating the trained agent.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -97,10 +103,9 @@ evaluate - Script for evaluating the trained agent.
 
   6. Environments
      
-  - Supported Tasks
-    * Half-Cheetah: A 2D robot optimizing for forward velocity.
-    * Ant: A 3D quadruped robot balancing complexity and stability.
-    * Humanoid: A humanoid robot learning to walk upright.
+  - Half-Cheetah: A 2D robot optimizing for forward velocity.
+  -  Ant: A 3D quadruped robot balancing complexity and stability.
+  - Humanoid: A humanoid robot learning to walk upright.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
