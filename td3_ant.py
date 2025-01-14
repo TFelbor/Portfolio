@@ -1,8 +1,5 @@
-# Commented out IPython magic to ensure Python compatibility.
-# Make sure pybullet is downloaded into your environment, you can use pip to install this through the terminal, using:
-# pip install pybullet
 
-"""## Importing the libraries"""
+""" Importing the libraries """
 
 import os
 import time
@@ -28,7 +25,7 @@ from gym import wrappers
 from torch.autograd import Variable
 from collections import deque
 
-"""## Step 1: We initialize the Experience Replay memory"""
+""" Step 1: We initialize the Experience Replay memory """
 
 class ReplayBuffer(object):
 
@@ -56,7 +53,7 @@ class ReplayBuffer(object):
       batch_dones.append(np.array(done, copy=False))
     return np.array(batch_states), np.array(batch_next_states), np.array(batch_actions), np.array(batch_rewards).reshape(-1, 1), np.array(batch_dones).reshape(-1, 1)
 
-"""## Step 2: We build one neural network for the Actor model and one neural network for the Actor target"""
+""" Step 2: We build one neural network for the Actor model and one neural network for the Actor target """
 
 class Actor(nn.Module):
 
@@ -73,7 +70,7 @@ class Actor(nn.Module):
     x = self.max_action * torch.tanh(self.layer_3(x))
     return x
 
-"""## Step 3: We build two neural networks for the two Critic models and two neural networks for the two Critic targets"""
+""" Step 3: We build two neural networks for the two Critic models and two neural networks for the two Critic targets """
 
 class Critic(nn.Module):
 
@@ -107,7 +104,7 @@ class Critic(nn.Module):
     x1 = self.layer_3(x1)
     return x1
 
-"""## Steps 4 to 15: Training Process"""
+""" Steps 4 to 15: Training Process """
 
 # Selecting the device (CPU or GPU)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -196,7 +193,7 @@ class TD3(object):
     self.actor.load_state_dict(torch.load('%s/%s_actor.pth' % (directory, filename)))
     self.critic.load_state_dict(torch.load('%s/%s_critic.pth' % (directory, filename)))
 
-"""## We make a function that evaluates the policy by calculating its average reward over 10 episodes"""
+""" We make a function that evaluates the policy by calculating its average reward over 10 episodes """
 
 def evaluate_policy(policy, eval_episodes=10):
   avg_reward = 0.
@@ -213,7 +210,7 @@ def evaluate_policy(policy, eval_episodes=10):
   print ("---------------------------------------")
   return avg_reward
 
-"""## We set the parameters"""
+""" We set the parameters """
 
 env_name = "AntBulletEnv-v0" # Name of a environment (set it to any Continous environment you want)
 seed = 0 # Random seed number
@@ -229,25 +226,25 @@ policy_noise = 0.2 # STD of Gaussian noise added to the actions for the explorat
 noise_clip = 0.5 # Maximum value of the Gaussian noise added to the actions (policy)
 policy_freq = 2 # Number of iterations to wait before the policy network (Actor model) is updated
 
-"""## We create a file name for the two saved models: the Actor and Critic models"""
+""" We create a file name for the two saved models: the Actor and Critic models """
 
 file_name = "%s_%s_%s" % ("TD3", env_name, str(seed))
 print ("---------------------------------------")
 print ("Settings: %s" % (file_name))
 print ("---------------------------------------")
 
-"""## We create a folder inside which will be saved the trained models"""
+""" We create a folder inside which will be saved the trained models """
 
 if not os.path.exists("./results"):
   os.makedirs("./results")
 if save_models and not os.path.exists("./pytorch_models"):
   os.makedirs("./pytorch_models")
 
-"""## We create the PyBullet environment"""
+""" We create the PyBullet environment """
 
 env = gym.make(env_name)
 
-"""## We set seeds and we get the necessary information on the states and actions in the chosen environment"""
+""" We set seeds and we get the necessary information on the states and actions in the chosen environment """
 
 env.seed(seed)
 torch.manual_seed(seed)
@@ -256,19 +253,19 @@ state_dim = env.observation_space.shape[0]
 action_dim = env.action_space.shape[0]
 max_action = float(env.action_space.high[0])
 
-"""## We create the policy network (the Actor model)"""
+""" We create the policy network (the Actor model) """
 
 policy = TD3(state_dim, action_dim, max_action)
 
-"""## We create the Experience Replay memory"""
+""" We create the Experience Replay memory """
 
 replay_buffer = ReplayBuffer()
 
-"""## We define a list where all the evaluation results over 10 episodes are stored"""
+""" We define a list where all the evaluation results over 10 episodes are stored """
 
 evaluations = [evaluate_policy(policy)]
 
-"""## We create a new folder directory in which the final results (videos of the agent) will be populated"""
+""" We create a new folder directory in which the final results (videos of the agent) will be populated """
 
 def mkdir(base, name):
     path = os.path.join(base, name)
@@ -283,7 +280,7 @@ if save_env_vid:
   env = wrappers.Monitor(env, monitor_dir, force = True)
   env.reset()
 
-"""## We initialize the variables"""
+""" We initialize the variables """
 
 total_timesteps = 0
 timesteps_since_eval = 0
@@ -291,7 +288,7 @@ episode_num = 0
 done = True
 t0 = time.time()
 
-"""## Training"""
+""" Training """
 
 # We start the main loop over 500,000 timesteps
 while total_timesteps < max_timesteps:
@@ -354,7 +351,7 @@ evaluations.append(evaluate_policy(policy))
 if save_models: policy.save("%s" % (file_name), directory="./pytorch_models")
 np.save("./results/%s" % (file_name), evaluations)
 
-"""## Inference"""
+""" Inference """
 
 class Actor(nn.Module):
 
