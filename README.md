@@ -1,4 +1,4 @@
-  ## Auto-Completion Trie Project (ACT)
+  # Auto-Completion Trie Project (ACT)
   
 
   The Auto-Completion Trie (ACT) is a Java program that implements an auto-completion feature using a trie data structure. It allows users to efficiently search for words based on a given prefix.
