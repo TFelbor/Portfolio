@@ -22,9 +22,6 @@ public abstract class WildCard extends Card{
 		}
 		else {
 			return false;
-		}
-		
-	}
-	
-	
+		}	
+	}	
 }
