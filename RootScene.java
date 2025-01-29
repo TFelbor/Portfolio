@@ -208,8 +208,8 @@ public class RootScene extends Scene {
 			String json = br.readLine();
 			JSONObject j = new JSONObject(json);
 			
-      // Update UI with the new price
-      price.setText(j.get("c")+"");
+      			// Update UI with the new price
+      			price.setText(j.get("c")+"");
 			symbol.setText(s);
 		
 		}
