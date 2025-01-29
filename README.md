@@ -1,4 +1,4 @@
-# Java UNO Game Implementation
+# Simplified Java UNO Game Implementation
 
 ## Overview
 This project is a Java implementation of the classic UNO card game, featuring a graphical user interface built with JavaFX. The game allows players to play UNO against a computer opponent, implementing core UNO game mechanics including special cards like Skip cards and Wild cards.
@@ -20,14 +20,15 @@ This project is a Java implementation of the classic UNO card game, featuring a 
 - An IDE that supports JavaFX development (e.g., Eclipse, IntelliJ IDEA)
 
 ## Project Structure
-The project consists of several key classes:
-- `mainClass.java`: Main application class handling the GUI and game loop
-- `Card.java`: Base class for all card types
-- `CommonCard.java`: Implementation of standard numbered cards
-- `Player.java`: Manages player hands and card drawing
-- `SkipCard.java`: Implementation of Skip cards
-- `WildCard.java`: Implementation of Wild cards
-- `Table.java`: Manages the game table state
+The project consists of several key classes and one sprite sheet:
+- mainClass.java → Main application class handling the GUI and game loop
+- Card.java → Base class for all card types
+- CommonCard.java → Implementation of standard numbered cards
+- Player.java → Manages player hands and card drawing
+- SkipCard.java → Implementation of Skip cards
+- WildCard.java → Implementation of Wild cards
+- Table.java → Manages the game table state
+- cards.png → sprite sheet with a template for all the UNO cards
 
 ## How to Run
 1. Ensure you have Java and JavaFX installed on your system
@@ -47,7 +48,7 @@ The project consists of several key classes:
 - The game implements basic UNO rules for card matching and play mechanics
 - The GUI is built using JavaFX Canvas for rendering
 
-## Future Improvements
+## Room For Improvements
 - Implementation of additional UNO card types
 - Multiplayer support
 - Score tracking
