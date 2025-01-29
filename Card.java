@@ -16,9 +16,9 @@ public class Card {
 	int color;
 	int value;
 	
-	
 	protected boolean check() {
+		
 		return false;
+		
 	}
-
 }
