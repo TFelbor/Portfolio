@@ -56,20 +56,14 @@ The application stores tracked stocks in a `saved.txt` file in the following for
 SYMBOL,PRICE
 ```
 
-## Known Limitations
+## Limitations
 - Maximum of 5 tracked stocks
 - Requires active internet connection
 - API rate limits may apply
 
-## Future Improvements
+## Potential Improvements
 - Additional stock information (volume, market cap, etc.)
 - Graph visualization of price history
 - Multiple watchlists
 - Enhanced error handling
 - Support for different time zones
-
-## Author
-Tytus Felbor
-
-## Course Information
-CPSC225 - Intermediate Programming Project 2
