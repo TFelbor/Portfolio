@@ -20,11 +20,11 @@
    
    ## 3. Application Structure
 
-   - AppRunner.java ⇒ main class that initiates & launches the program
-   - CalculatorScene.java ⇒ class responsible for displaying & handling the calculator
-   - ChatScene.java ⇒ class implementing a simplified chat between you and me
-   - HomeScene.java ⇒ class responsible for guiding the user through the choices of scenes
-   - LoginScene.java ⇒ class responsible for the log-in scene
-   - SceneManager.java ⇒ class that manages and simplifies the scene operations
-   - SceneTemplate.java ⇒ abstract class serving as a blueprint for other scene classes
-   - StockScene.java ⇒ class responsible for displaying & looking-up a stock price of a given symbol
+   - `AppRunner.java` ⇒ main class that initiates & launches the program
+   - `CalculatorScene.java` ⇒ class responsible for displaying & handling the calculator
+   - `ChatScene.java` ⇒ class implementing a simplified chat between you and me
+   - `HomeScene.java` ⇒ class responsible for guiding the user through the choices of scenes
+   - `LoginScene.java` ⇒ class responsible for the log-in scene
+   - `SceneManager.java` ⇒ class that manages and simplifies the scene operations
+   - `SceneTemplate.java` ⇒ abstract class serving as a blueprint for other scene classes
+   - `StockScene.java` ⇒ class responsible for displaying & looking-up a stock price of a given symbol
