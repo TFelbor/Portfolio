@@ -22,9 +22,9 @@ A JavaFX-based stock tracking application that allows users to monitor real-time
 - Finnhub API for stock data
 
 ## Project Structure
-- `projectTwoMain.java`: Main application entry point
-- `RootScene.java`: Main UI scene and application logic
-- `Stock.java`: Stock data model class
+- `projectTwoMain.java` → Main application entry point
+- `RootScene.java` → Main UI scene and application logic
+- `Stock.java` → Stock data model class
 
 ## Setup and Installation
 1. Ensure you have JDK 8 or higher installed
