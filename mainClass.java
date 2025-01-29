@@ -74,6 +74,7 @@ public class mainClass extends Application {
 				break;
 			}
 		}
+		
 		if (x > 340 && x < 460 && y > 640 && y < 680) {
 			
 			human.draw();
@@ -81,7 +82,6 @@ public class mainClass extends Application {
 		} 
 
 		if (!played) return;
-
 
 		if (cpu.getHand().size() > 0) {
 			cpuMiddle = cpu.getHand().get(0);
@@ -115,6 +115,7 @@ public class mainClass extends Application {
 			sy = 120+card.color*115 ;
 			dx = 20+75*(i%10);
 			dy = 400+110*(i/10);
+			
 			if (card.color == card.BLACK) {
 				
 				sx = 411 ;
@@ -133,6 +134,7 @@ public class mainClass extends Application {
 			sy = 14 ;
 			dx = 20+75*(i%10);
 			dy = 0+110*(i/10);
+			
 			if (card.color == card.BLACK) {
 				sx = 411 ;
 				sy = 120+card.color*115 ;
@@ -142,28 +144,37 @@ public class mainClass extends Application {
 		}
 
 		if (humanMiddle != null) {
+			
 			sx = 411+humanMiddle.value*73 ;
 			sy = 120+humanMiddle.color*115 ;
 			dx = 20+75*4.5;
 			dy = 280;
+			
 			if (humanMiddle.color == humanMiddle.BLACK) {
+				
 				sx = 411 ;
 				sy = 120+humanMiddle.color*115 ;
+				
 			}
+			
 			g.setGlobalAlpha(0.7);
 			g.drawImage( cardImages, sx,sy,73,115, dx,dy,75, 110 );
 			g.setGlobalAlpha(1);
 		}
 		
 		if (cpuMiddle != null) {
+			
 			sx = 411+cpuMiddle.value*73 ;
 			sy = 120+cpuMiddle.color*115 ;
 			dx = 20+75*4.5+20;
 			dy = 230;
+			
 			if (cpuMiddle.color == cpuMiddle.BLACK) {
+				
 				sx = 411 ;
 				sy = 120+cpuMiddle.color*115 ;
 			}
+			
 			g.drawImage( cardImages, sx,sy,73,115, dx,dy,75, 110 );
 		}
 	} // end draw()
