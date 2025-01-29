@@ -24,7 +24,7 @@ import javafx.scene.text.Font;
 
 public class RootScene extends Scene {
 
-  // UI components
+	// UI components
 	private BorderPane root = null;
 	private Pane center;
 	private TextField queryText = new TextField();
@@ -37,12 +37,12 @@ public class RootScene extends Scene {
 	private Label savedPrice;
 	private int row = -1;
 	// 2D array to store stock data:
-  // Column 0: stock symbol
-  // Column 1: last recorded price
-  // Column 2: updated price for comparison
-  private String[][] saved = new String[5][3];
+  	// Column 0: stock symbol
+  	// Column 1: last recorded price
+  	// Column 2: updated price for comparison
+  	private String[][] saved = new String[5][3];
 
-  // Updates prices for all tracked stocks and updates UI with color-coded changes
+  	// Updates prices for all tracked stocks and updates UI with color-coded changes
 	public void updatePrice() {
 		
 		int row = 0;
@@ -54,44 +54,45 @@ public class RootScene extends Scene {
 		
 		try {
 
-      // Clear existing display
+      			// Clear existing display
 			leftPanel.getChildren().clear();
 
-      // Update each tracked stock
+      			// Update each tracked stock
 			while (row < 5 && saved[row][symbolColumn] != null) {
         
-        // Fetch current price using Finnhub API
-			  URL url = new URL("https://finnhub.io/api/v1/quote?symbol=" + saved[row][0] + "&token="+key);
-			  HttpURLConnection con = (HttpURLConnection) url.openConnection();
-			  con.setRequestMethod("GET");
-			  BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
-			  String json = br.readLine();
-			  JSONObject j = new JSONObject(json);
+        			// Fetch current price using Finnhub API
+				URL url = new URL("https://finnhub.io/api/v1/quote?symbol=" + saved[row][0] + "&token="+key);
+				HttpURLConnection con = (HttpURLConnection) url.openConnection();
+				con.setRequestMethod("GET");
+				BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
+				String json = br.readLine();
+				JSONObject j = new JSONObject(json);
 
-        // Store new price and compare with old price
-			  saved [row][newPriceColumn] = j.get("c") +"";
-			  double newPrice = Double.parseDouble(saved[row][newPriceColumn]);
-			  double oldPrice = Double.parseDouble(saved[row][oldPriceColumn]);
-			  Label temp = new Label(saved[row][0]+": "+saved[row][newPriceColumn]);
+        			// Store new price and compare with old price
+			  	saved [row][newPriceColumn] = j.get("c") +"";
+			  	double newPrice = Double.parseDouble(saved[row][newPriceColumn]);
+			  	double oldPrice = Double.parseDouble(saved[row][oldPriceColumn]);
+			  	Label temp = new Label(saved[row][0]+": "+saved[row][newPriceColumn]);
 
-        // Color code price changes (green for increase, red for decrease)
-			  if (oldPrice < newPrice) {
+        			// Color code price changes (green for increase, red for decrease)
+			  	if (oldPrice < newPrice) {
 				
-				  temp.setStyle("-fx-text-fill:green");
-			    leftPanel.getChildren().add( temp);
-			    saved[row][oldPriceColumn] = saved[row][newPriceColumn];
+					temp.setStyle("-fx-text-fill:green");
+			    		leftPanel.getChildren().add( temp);
+			    		saved[row][oldPriceColumn] = saved[row][newPriceColumn];
 				
-			}
+				}
 			
-			  else {
-          temp.setStyle("-fx-text-fill:red");
-				  leftPanel.getChildren().add( temp);
-				  saved[row][oldPriceColumn] = saved[row][newPriceColumn];
+			  	else {
+          				
+					temp.setStyle("-fx-text-fill:red");
+				  	leftPanel.getChildren().add( temp);
+				  	saved[row][oldPriceColumn] = saved[row][newPriceColumn];
 				
-			}
+				}
 			
-			  row++;
-			  priceLabelIndex = priceLabelIndex + 2;
+			  	row++;
+			  	priceLabelIndex = priceLabelIndex + 2;
 			
 			}
 		}
@@ -103,13 +104,13 @@ public class RootScene extends Scene {
 		}
 	}
 
-  // Constructor - Initializes the UI and sets up event handlers
+  	// Constructor - Initializes the UI and sets up event handlers
 	public RootScene() {
 		
 		super(new BorderPane(), 600, 400);
 		root = (BorderPane)super.getRoot();
 
-    // Set up the top panel with search functionality
+    		// Set up the top panel with search functionality
 		HBox topPanel = new HBox();
 		topPanel.setAlignment(Pos.CENTER);
 		topPanel.getChildren().add(queryText);
@@ -123,7 +124,7 @@ public class RootScene extends Scene {
 		topPanel.getChildren().add(find);
 		root.setTop(topPanel);
 
-    // Set up center panel with stock display
+		// Set up center panel with stock display
 		center = new Pane();
 		center.getChildren().add(symbol);
 		center.getChildren().add(price);
@@ -137,7 +138,7 @@ public class RootScene extends Scene {
 		symbol.setAlignment(Pos.CENTER_LEFT);
 		root.setCenter(center);
 
-    // Set up bottom panel with track/quit buttons
+		// Set up bottom panel with track/quit buttons
 		HBox bottom = new HBox();
 		Button track = new Button("Track");
 		track.setOnAction(event -> {
@@ -185,7 +186,7 @@ public class RootScene extends Scene {
 		root.setBottom(bottom);
 		root.setLeft(leftPanel);
 
-    // Load saved stocks and update prices
+		// Load saved stocks and update prices
 		loadQuote();
 		updatePrice();
 
@@ -194,12 +195,12 @@ public class RootScene extends Scene {
 	// Fetches current stock quote from Finnhub API	
 	public void getQuote (String s) {
     
-    // API authentication key 
+		// API authentication key 
 		String key = "cfr4dppr01qhg1ura7e0cfr4dppr01qhg1ura7eg";
 			
 		try {
 
-      // Make API request and parse response
+			// Make API request and parse response
 			URL url = new URL("https://finnhub.io/api/v1/quote?symbol=" + s + "&token="+key);
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setRequestMethod("GET");
@@ -220,7 +221,7 @@ public class RootScene extends Scene {
 		}
 	}
 
-  // Saves curently displayed stock to tracking list
+	// Saves curently displayed stock to tracking list
 	public void save() {
 		
 		savedSymbol = new Label();
@@ -228,7 +229,7 @@ public class RootScene extends Scene {
 		savedSymbol.setText(symbol.getText());
 		savedPrice.setText(price.getText());
 
-    // Add to UI and storage
+		// Add to UI and storage
 		savedSymbol.setFont(new Font(20));
 		savedPrice.setFont(new Font(20));
 		leftPanel.getChildren().add(savedSymbol);
@@ -242,7 +243,7 @@ public class RootScene extends Scene {
 	// Loads previously saved stocks from file
 	public void loadQuote() {
 
-    // Set up header labels
+		// Set up header labels
 		Label l1 = new Label("Saved Stock");
 		Label l2 = new Label("Price");
 		l1.setLayoutX(5);
@@ -254,37 +255,38 @@ public class RootScene extends Scene {
 				
 		try {
 
-      // Read saved stocks from the file
-		  FileReader fr = new FileReader("saved.txt");
-		  BufferedReader br = new BufferedReader(fr);
-		  String line =null;
-		  int ct = 0;
+			// Read saved stocks from the file
+			FileReader fr = new FileReader("saved.txt");
+			BufferedReader br = new BufferedReader(fr);
+			String line =null;
+			int ct = 0;
 
-      // Process each saved stock & add it to UI
-		  while ((line = br.readLine()) != null) {
-        String[] values = line.split(",");
-        row++;
-	      saved [ct][0] = values[0];
-	      saved [ct][1] = values[1];
-	      Label tempSym = new Label();
-	      tempSym.setText(values[0]);
-	      tempSym.setFont(new Font(20));		
-        leftPanel.getChildren().add(tempSym);
-        Label tempPr = new Label();
-	      tempPr.setText(values[1]);
-	      tempPr.setFont(new Font(20));
-	      leftPanel.getChildren().add(tempPr);
-	      ct++;
+			// Process each saved stock & add it to UI
+		  	while ((line = br.readLine()) != null) {
+				
+				String[] values = line.split(",");
+			  	row++;
+				saved [ct][0] = values[0];
+				saved [ct][1] = values[1];
+				Label tempSym = new Label();
+				tempSym.setText(values[0]);
+				tempSym.setFont(new Font(20));		
+				leftPanel.getChildren().add(tempSym);
+				Label tempPr = new Label();
+				tempPr.setText(values[1]);
+				tempPr.setFont(new Font(20));
+				leftPanel.getChildren().add(tempPr);
+				ct++;
 	                
-	       }
+			}
 
-	        br.close();
+	        	br.close();
 		
 		}
 		
 		catch (Exception e) {
 			
-		e.printStackTrace();
+			e.printStackTrace();
 		
 		}	
 	}
