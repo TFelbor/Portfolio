@@ -1,11 +1,8 @@
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
   ## TD3 Reinforcement Learning Implementation Project
 
   This repository contains an implementation of the Twin Delayed Deep Deterministic Policy Gradient (TD3) algorithm for continuous action space tasks.
   TD3 builds upon the Deep Deterministic Policy Gradient (DDPG) algorithm by addressing key limitations and improving stability and performance in reinforcement learning environments.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ## Table of Contents
   
@@ -17,7 +14,6 @@
   6. Environments
   7. Evaluation
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ## 1. Installation
 
@@ -25,7 +21,6 @@
   - Install the required dependencies by running:
   pip install pybullet gym torch numpy
   
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ## 2. Features
      
@@ -39,7 +34,6 @@
     * HumanoidBulletEnv-v0
   - Replay Buffer for storing and sampling experiences.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ## 3. Usage
 
@@ -62,7 +56,6 @@
   avg_reward = evaluate_policy(policy, eval_episodes=10)
   print(f"Average Reward: {avg_reward}")
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ## 4. Project Structure
 
@@ -79,7 +72,6 @@
 - evaluate
     * Script for evaluating the trained agent.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ## 5. Components Overview
 
@@ -97,7 +89,6 @@
     * Delayed Updates: Updates the Actor less frequently than the Critics for stability.
   - Target Networks: Slow-moving copies of the Actor and Critics for consistent Q-value estimation.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ## 6. Environments
      
@@ -105,16 +96,11 @@
   -  Ant: A 3D quadruped robot balancing complexity and stability.
   - Humanoid: A humanoid robot learning to walk upright.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ## 7. Evaluation
      
   To periodically measure the agent's performance:
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+  
   def evaluate_policy(policy, eval_episodes=10):
     ...
     return avg_reward
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
