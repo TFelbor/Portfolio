@@ -55,9 +55,3 @@ The project consists of several key classes and one sprite sheet:
 - Sound effects
 - Advanced computer AI strategies
 - Network play capability
-
-## Author
-Tytus Felbor
-
-## License
-This project is part of CPSC225 - Intermediate Programming Project 1.
