@@ -1,8 +1,6 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ## TD3 Reinforcement Learning Implementation Project
-  
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   This repository contains an implementation of the Twin Delayed Deep Deterministic Policy Gradient (TD3) algorithm for continuous action space tasks.
   TD3 builds upon the Deep Deterministic Policy Gradient (DDPG) algorithm by addressing key limitations and improving stability and performance in reinforcement learning environments.
