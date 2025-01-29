@@ -6,5 +6,4 @@ public class Table {
 
 	Card onTop;
 	
-	
 }
