@@ -36,6 +36,7 @@ public class Read_Scan_Parse {
 
 	// Building the transition table method
 	public static int[][] build() {
+		
 		// Parse Table T[A, a], where A is a nonterminal which is a aprt G9, and a is a terminal derived from the terminals variable
 				int [][] T = new int[nonterminals.size()][terminals.size()];
 				int ruleNr = 1;
@@ -56,7 +57,7 @@ public class Read_Scan_Parse {
 								+ "\t\tT[" + nonterminals.indexOf(A) + "][" + terminals.indexOf(alpha) + "]" + " = " + ruleNr + "\n");
 						// Add A -> α to T[A, a]
 						T[nonterminals.indexOf(A)][terminals.indexOf(alpha)] = ruleNr;
-					}// For each terminal a (excepting epsilon) in FIRST(α) 
+					} // For each terminal a (excepting epsilon) in FIRST(α) 
 					else if (nonterminals.contains(alpha)) {
 						for (String a : firstSets[nonterminals.indexOf(alpha)]) {
 							System.out.println("\t\t'" + a + "' != epsilon\n"
