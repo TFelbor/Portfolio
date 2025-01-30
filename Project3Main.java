@@ -1,25 +1,8 @@
 // Author: Tytus Felbor
+// CPSC225 : Intermediate Programming
+// Project 3 - Algorithm Runtime Analysis
 
 public class Project3Main {
-
-	public static void reverseBubbleSort(int[] arr) {
-		int n = arr.length;
-
-		for (int i = 0; i < n - 1; i++) {
-			
-			for (int j = 0; j < n - i - 1; j++) {
-				
-				if (arr[j] < arr[j + 1]) {
-					
-					// Swap elements if they are in the wrong order
-					int temp = arr[j];
-					arr[j] = arr[j + 1];
-					arr[j + 1] = temp;
-				}
-			}
-		}
-	}
-
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -39,6 +22,7 @@ public class Project3Main {
 			//ManySorts.selection(arr);
 			//ManySorts.merge(arr);
 			//ManySorts.quick(arr);
+			//ManySorts.reverseBubbleSort(arr);
 			ManySorts.stooge(arr);
 			long end = System.currentTimeMillis();
 			System.out.printf("Sort complete: %d, %d, %d, ...\n", arr[0], arr[1], arr[2]);
