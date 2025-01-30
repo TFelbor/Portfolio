@@ -13,9 +13,9 @@ This project implements and analyzes the runtime performance of various sorting 
 7. Reverse Bubble Sort (for testing purposes)
 
 ## Project Structure
-- `ManySorts.java`: Contains implementations of all main sorting algorithms
-- `myThread.java`: Implements threading functionality for concurrent sorting analysis
-- `Project3Main.java`: Main driver class with testing implementations and reverse sorting
+- `ManySorts.java` → Contains implementations of all main sorting algorithms
+- `myThread.java` → Implements threading functionality for concurrent sorting analysis
+- `Project3Main.java` → Main driver class with testing implementations and reverse sorting
 
 ## Features
 - Multiple sorting algorithm implementations
@@ -27,19 +27,19 @@ This project implements and analyzes the runtime performance of various sorting 
   - Various array sizes (10,000 to 80,000 elements)
 
 ## Algorithm Complexities
-- Insertion Sort: O(n²)
-- Bubble Sort: O(n²)
-- Selection Sort: O(n²)
-- Merge Sort: O(n log n)
-- Quick Sort: O(n log n)
-- Stooge Sort: O(n^(log 3/log 1.5)) ≈ O(n^2.7095)
+- Insertion Sort → O(n²)
+- Bubble Sort → O(n²)
+- Selection Sort → O(n²)
+- Merge Sort → O(n log n)
+- Quick Sort → O(n log n)
+- Stooge Sort → O(n^(log 3/log 1.5)) ≈ O(n^2.7095)
 
 ## Usage
 
 ### Basic Usage
-```java
-int[] arr = new int[10000];
+```
 // Fill array with data
+int[] arr = new int[10000];
 
 // Time and run a sorting algorithm
 long begin = System.currentTimeMillis();
@@ -50,7 +50,7 @@ System.out.printf("Run time: %fs", (end-begin)/1000.0);
 ```
 
 ### Thread-based Testing
-```java
+```
 // Create and run multiple threads for concurrent testing
 Thread t1 = new Thread(new myThread());
 t1.start();
