@@ -1,22 +1,22 @@
-  # Parsing Table Generator and Expression Parser
+# Parsing Table Generator and Expression Parser
   
-  This Java program implements a parsing table generator and expression parser based on a modified G9 grammar. It's designed to process simple arithmetic expressions with assignments    (e.g., `id=E`), performing lexical analysis (scanning) and parsing using a bottom-up parsing approach.
-  
-  
-  ## Table of Contents
-  
-    1. Grammar
-    2. Features
-    3. Requirements
-    4. Usage
-    5. Output
-    6. Project Structure
-    7. Implementation Analysis
+This Java program implements a parsing table generator and expression parser based on a modified G9 grammar. It's designed to process simple arithmetic expressions with assignments    (e.g., `id=E`), performing lexical analysis (scanning) and parsing using a bottom-up parsing approach.
   
   
-  ## 1. Grammar
+## Table of Contents
   
-  The program uses a modified version of grammar G9 with the following productions:
+  1. Grammar
+  2. Features
+  3. Requirements
+  4. Usage
+  5. Output
+  6. Project Structure
+  7. Implementation Analysis
+  
+  
+## 1. Grammar
+  
+The program uses a modified version of grammar G9 with the following productions:
   ```
   1. P  -> id=E;
   2. E  -> T E'
