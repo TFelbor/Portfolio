@@ -4,6 +4,7 @@ This project is a Java implementation of the classic UNO card game, featuring a 
 
 
 ## Table of Contents
+
 1. Features
 2. Prerequisites
 3. Project Structure
@@ -11,6 +12,7 @@ This project is a Java implementation of the classic UNO card game, featuring a 
 5. Gameplay Instructions
 6. Technical Details
 7. Potential Improvements
+
 
 ## 1. Features
 
