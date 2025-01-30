@@ -1,3 +1,7 @@
+// Author: Tytus Felbor
+// CPSC271 : Robotics
+// Project 3 - Robot & Maze
+
 // Define motor control pins
 const int ENA = 6;  // PWM pin for Motor 1 speed control
 const int IN1 = 4;  // Direction pin 1 for Motor 1
