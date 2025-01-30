@@ -56,7 +56,7 @@
   1. Create a text file (e.g., `expression.txt`) containing the expression to parse
   2. Ensure the text file is in the same directory as the Java program
   3. Run the program:
-  ```bash
+  ```
   javac Read_Scan_Parse.java
   java Read_Scan_Parse
   ```
