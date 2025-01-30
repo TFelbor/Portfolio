@@ -1,8 +1,5 @@
 # Stock Tracker Application
 
-
-## Overview
-
 A JavaFX-based stock tracking application that allows users to monitor real-time stock prices using the Finnhub API. The application enables users to search for stocks, track multiple stocks simultaneously, and visualize price changes with color-coded indicators.
 
 
