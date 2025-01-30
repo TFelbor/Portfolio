@@ -1,6 +1,4 @@
 // Author: Tytus Felbor
-// CPSC225 : Intermediate Programming
-// Project 3 - Algorithm Runtime Analysis
 
 public class ManySorts {
 	
