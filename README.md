@@ -15,6 +15,7 @@ A JavaFX-based stock tracking application that allows users to monitor real-time
 8. Limitations
 9. Potential Improvements
 
+
 ## 1. Features
 
 - Real-time stock price tracking
