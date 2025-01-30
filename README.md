@@ -4,12 +4,14 @@ This project implements a robot navigation system that combines path planning us
 
 
 ## Table of Contents
+
 1. Features
 2. Components
 3. Requirements
 4. Pin Configurations
 5. Usage
 6. Potential Improvements
+
 
 ## 1. Features
 - A* pathfinding algorithm implementation in Java
