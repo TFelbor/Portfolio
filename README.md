@@ -1,9 +1,17 @@
 # Robot Navigation and Control System
 
-## Overview
 This project implements a robot navigation system that combines path planning using the A* algorithm and physical robot movement control. The system is designed to help a robot navigate through a maze or grid-like environment while avoiding obstacles, using line-following sensors for precise movement control.
 
-## Features
+
+## Table of Contents
+1. Features
+2. Components
+3. Requirements
+4. Pin Configurations
+5. Usage
+6. Potential Improvements
+
+## 1. Features
 - A* pathfinding algorithm implementation in Java
   - Finds optimal path in a grid-based environment
   - Calculates movement directions (forward, left, right)
@@ -14,7 +22,7 @@ This project implements a robot navigation system that combines path planning us
   - Basic movement functions: forward, left, right, stop
   - PWM-based speed control
 
-## Components
+## 2. Components
 
 ### A* Pathfinding (A_Star_Search.java)
 - Grid-based pathfinding implementation
@@ -33,7 +41,7 @@ This project implements a robot navigation system that combines path planning us
   - Right turn
   - Stop
 
-## Requirements
+## 3. Requirements
 ### For A* Algorithm
 - Java Development Kit (JDK)
 - Java IDE (recommended)
@@ -48,7 +56,7 @@ This project implements a robot navigation system that combines path planning us
   - Power supply
   - Chassis and wheels
 
-## Pin Configuration
+## 4. Pin Configuration
 ### Motor Control Pins
 - ENA (Motor 1 Speed) → Pin 6
 - IN1 (Motor 1 Direction 1) → Pin 4
@@ -61,7 +69,7 @@ This project implements a robot navigation system that combines path planning us
 - Left Sensor → Pin 2
 - Right Sensor → Pin 13
 
-## Usage
+## 5. Usage
 
 ### Running the A* Algorithm
 1. Compile the Java file
@@ -79,7 +87,7 @@ java A_Star_Search
 3. Power on the robot
 4. Place the robot on a line-following track
 
-## Potential Improvements
+## 6. Potential Improvements
 - Integration of A* pathfinding with physical robot movement
 - Addition of obstacle detection sensors
 - Implementation of PID control for smoother movement
