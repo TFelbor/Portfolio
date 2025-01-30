@@ -27,7 +27,7 @@ class Cell {
 }
 
 // Implementation of the A* search algorithm
-public class AStarSearch {
+public class A_Star_Search {
 
 	// Constants defining the grid dimensions
 	private static final int ROW = 7;
