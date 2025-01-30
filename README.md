@@ -3,6 +3,13 @@
   The Auto-Completion Trie (ACT) is a Java program that implements an auto-completion feature using a trie data structure. It allows users     to efficiently search for words based on a given prefix.
   
 
+  ## Table of Contents
+
+  1. Features
+  2. Usage
+  3. Application Structure
+  
+
   ## 1. Features
   
   - Depth First Search ⇒ insertion of words into the trie data structure & auto-completion of words based on a given prefix.
