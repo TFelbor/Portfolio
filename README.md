@@ -16,7 +16,7 @@ This project implements a robot navigation system that combines path planning us
 
 ## Components
 
-### A* Pathfinding (AStarSearch.java)
+### A* Pathfinding (A_Star_Search.java)
 - Grid-based pathfinding implementation
 - Uses heuristic approach to find optimal path
 - Generates step-by-step movement instructions
@@ -66,11 +66,11 @@ This project implements a robot navigation system that combines path planning us
 ### Running the A* Algorithm
 1. Compile the Java file
 ```
-javac AStarSearch.java
+javac A_Star_Search.java
 ```
 2. Run the program
 ```
-java AStarSearch
+java A_Star_Search
 ```
 
 ### Implementing Robot Control
