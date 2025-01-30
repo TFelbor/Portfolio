@@ -1,6 +1,12 @@
    # Basic JavaFX GUI Application
 
-   The application is a Java program that with the use of JavaFX features implements some basic techniques and solutions to problems that building a GUI might present one with.
+   The application is a Java program that with the use of JavaFX features implements some basic techniques and solutions to problems that       building a GUI might present one with.
+
+   ## Table of Contents
+
+   1. Features
+   2. Usage
+   3. Application Structure
 
 
    ## 1. Features 
