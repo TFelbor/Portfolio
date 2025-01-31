@@ -1,6 +1,6 @@
 # Parsing Table Generator and Expression Parser
   
-This Java program implements a parsing table generator and expression parser based on a modified G9 grammar. It's designed to process simple arithmetic expressions with assignments    (e.g., `id=E`), performing lexical analysis (scanning) and parsing using a bottom-up parsing approach.
+  This Java program implements a parsing table generator and expression parser based on a modified G9 grammar. It's designed to process simple arithmetic expressions with assignments    (e.g., `id=E`), performing lexical analysis (scanning) and parsing using a bottom-up parsing approach.
   
   
 ## Table of Contents
@@ -16,7 +16,7 @@ This Java program implements a parsing table generator and expression parser bas
   
 ## 1. Grammar
   
-The program uses a modified version of grammar G9 with the following productions:
+  The program uses a modified version of grammar G9 with the following productions:
   ```
   1. P  -> id=E;
   2. E  -> T E'
@@ -31,7 +31,7 @@ The program uses a modified version of grammar G9 with the following productions
   ```
   
   
-  ## 2. Features
+## 2. Features
   
   - Lexical analysis (Scanner) that recognizes:
     - Identifiers (lowercase letters)
@@ -45,13 +45,13 @@ The program uses a modified version of grammar G9 with the following productions
   - Detailed console output showing the parsing process
   
   
-  ## 3. Requirements
+## 3. Requirements
   
   - Java Development Kit (JDK) 8 or higher
   - Text file containing the expression to parse
   
   
-  ## 4. Usage
+## 4. Usage
   
   1. Create a text file (e.g., `expression.txt`) containing the expression to parse
   2. Ensure the text file is in the same directory as the Java program
@@ -62,7 +62,7 @@ The program uses a modified version of grammar G9 with the following productions
   ```
   
   
-  ## 5. Input Format
+## 5. Input Format
   
   The input file should contain a simple arithmetic expression following these rules:
   - Identifiers must be lowercase letters
@@ -77,7 +77,7 @@ The program uses a modified version of grammar G9 with the following productions
   ```
   
   
-  ## 6. Output
+## 6. Output
   
   The program provides detailed console output showing:
   1. Scanning process and identified tokens
@@ -85,13 +85,13 @@ The program uses a modified version of grammar G9 with the following productions
   3. Step-by-step parsing process
   
   
-  ## 7. Project Structure
+## 7. Project Structure
   
   - `Read_Scan_Parse.java` → Main program file containing scanner and parser implementation
   - `expression.txt` → Input file containing the expression to parse
   
   
-  ## 8. Implementation Details
+## 8. Implementation Details
   
   The program is divided into three main components:
   1. **Scanner** → Performs lexical analysis using regular expressions
